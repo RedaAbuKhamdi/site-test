@@ -25,9 +25,16 @@ jobs:
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name "github-actions[bot]"
+          # Configure Git to use the token for pushes
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # make sure we can push via HTTPS + token
           git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git"
-          # push ONLY the staging folder into gh-pages
-          git subtree push --prefix staging origin gh-pages --force
+          
+          # 1) Split staging/ into a branch named 'deploy'
+          git subtree split --prefix staging -b deploy
+          
+          # 2) Force-push that branch to gh-pages (overwriting it)
+          git push origin deploy:gh-pages --force
+          
+          # 3) Clean up
+          git branch -D deploy
