@@ -16,26 +16,22 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: Install & Build
+      - name: Build & commit staging
         run: |
           npm install
           npm run staging
           cp staging/index.html staging/404.html
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add staging
+          git commit -m "ci: add staging build" || echo "No changes to commit"
+          git push
 
       - name: Push staging subtree to gh-pages
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Configure Git to use the token for pushes
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git"
-          
-          # 1) Split staging/ into a branch named 'deploy'
           git subtree split --prefix staging -b deploy
-          
-          # 2) Force-push that branch to gh-pages (overwriting it)
           git push origin deploy:gh-pages --force
-          
-          # 3) Clean up
           git branch -D deploy
