@@ -20,6 +20,7 @@ jobs:
         run: |
           npm install
           npm run staging
+          cp staging/index.html staging/404.html
 
       - name: Push staging subtree to gh-pages
         env:
