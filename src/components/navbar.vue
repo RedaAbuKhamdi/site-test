@@ -232,7 +232,7 @@ export default {
     height: 35px;  /* adjust as needed */
     width: auto;    /* maintain aspect ratio */
     margin-right: 10px; /* space between menu icon and logo */
-    padding: 5px;
+    padding: 7px;
   }
   /* Adjust the logo (navbar-brand) for mobile */
   .navbar-brand {
