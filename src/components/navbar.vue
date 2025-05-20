@@ -236,7 +236,7 @@ export default {
   }
   /* Adjust the logo (navbar-brand) for mobile */
   .navbar-brand {
-    height: 50px;  /* adjust as needed */
+    height: 55px;  /* adjust as needed */
     margin: 0;     /* remove extra margins */
     padding: 5px 0;
   }

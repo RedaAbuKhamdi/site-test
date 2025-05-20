@@ -3,8 +3,6 @@ name: CI
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
   workflow_dispatch:
 
 # You can also declare this at the top level instead of per-job
@@ -36,21 +34,13 @@ jobs:
       - name: Build application
         run: npm run staging
 
-      - name: Upload Pages artifact
-        uses: actions/upload-artifact@v4
+      - uses: EndBug/add-and-commit@v9
+        name: Commit build
         with:
-          path: staging
-          name: cleverappssg-staging
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    # This job needs write access so it can publish to Pages
-    permissions:
-      pages: write
-      id-token: write
-
-    steps:
-      - uses: actions/deploy-pages@v4
-        with:
-          artifact_name: cleverappssg-staging
+          add: 'staging'
+          author_name: GitActions
+          fetch: true
+          message: "Build for commit: ${{ github.event.head_commit.message }}"
+          new_branch: gh-pages
+          pathspec_error_handling: ignore
+          pull: '--rebase --autostash ...'
