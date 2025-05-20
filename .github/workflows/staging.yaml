@@ -47,7 +47,5 @@ jobs:
           author_name: github-actions[bot]
           author_email: github-actions[bot]@users.noreply.github.com
           message: "Build for commit: ${{ github.sha }}"
-          # target branch (will create it if missing)
           new_branch: gh-pages
-          # force push so gh-pages is replaced cleanly
-          push: '--force'
+          push: 'origin yourBranchName --set-upstream --force'
