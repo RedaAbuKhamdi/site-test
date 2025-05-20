@@ -1,8 +1,6 @@
 on:
   push:
-    branches: [ main ]
-    paths-ignore:
-      - '.github/**'
+    branches: [ master ]
 jobs:
   deploy:
     runs-on: ubuntu-latest
