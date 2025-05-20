@@ -1,0 +1,47 @@
+{
+  "name": "portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service serve --port 4000",
+    "build": "vue-cli-service build --dest publish --mode production",
+    "staging": "vue-cli-service build --dest staging --mode staging"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.4",
+    "@vueuse/head": "^0.7.5",
+    "axios": "^0.24.0",
+    "bootstrap": "^5.1.3",
+    "core-js": "^3.9.0",
+    "date-fns": "^2.11.0",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "marked": "^4.0.12",
+    "moment": "^2.29.1",
+    "node-html-parser": "^5.2.0",
+    "postcss": "^8.4.12",
+    "vue": "^3.2.33",
+    "vue-loading-overlay": "^4.0.4",
+    "vue-router": "^4.0.1",
+    "vue-use-spring": "^0.1.1",
+    "vue3-carousel": "^0.1.38",
+    "vue3-circle-progress": "^1.0.7",
+    "vue3-perfect-scrollbar": "^1.5.5",
+    "vue3-youtube": "^0.1.9",
+    "vuex": "4.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.3",
+    "@vue/cli-service": "^5.0.3",
+    "@vue/compiler-sfc": "^3.2.36",
+    "faker": "^4.1.0",
+    "fs-extra": "^11.2.0",
+    "vue-template-compiler": "^2.6.11",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-security": "^1.5.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^12.4.3"
+  }
+}

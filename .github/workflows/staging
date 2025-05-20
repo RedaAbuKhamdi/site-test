@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+# You can also declare this at the top level instead of per-job
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Grant the build job permission to upload the artifact
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build application
+        run: npm run staging
+
+      - name: Upload Pages artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: staging
+          name: cleverappssg-staging
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    # This job needs write access so it can publish to Pages
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: actions/deploy-pages@v4
+        with:
+          artifact_name: cleverappssg-staging

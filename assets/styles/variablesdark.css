@@ -1,0 +1,13 @@
+:root {
+    --primary-background-color: rgb(32, 32, 32);
+    --secondary-background-color: #5C5C65;
+    --secondary-background-color-variation-1: #4a4a4a;
+    --secondary-background-color-variation-2: #5a5a5a;
+    --secondary-background-color-variation-3: rgb(44, 44, 44);
+    --secondary-text-color: rgb(153, 153, 153);
+    --secondary-text-color-variation-1: #c2c2c2;
+    --primary-text-color: white;
+    --primary-text-color-contrast: black;
+    --primary-brand-color: #02abd6;
+    --primary-brand-color-active: #00ceff;
+}

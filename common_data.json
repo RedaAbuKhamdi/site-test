@@ -1,0 +1,35 @@
+{
+  "footer": {
+    "copyright": "© 2017 – 2025 Clever Apps Pte. Ltd."
+  },
+  "social_links": {
+    "facebook": "https://www.facebook.com/Clever-Apps-Pte-Ltd-103285885172677",
+    "youtube": "https://www.youtube.com/c/CleverApps"
+  },
+  "footer_links": {
+    "privacy": "https://cleverappssg.com/legal/privacy.html",
+    "terms": "https://cleverappssg.com/legal/terms.html"
+  },
+  "connector_sdk_link": "https://cleverappssg.com/connector/",
+  "connector_sdk_title": "Connector SDK",
+  "inquiries_address": "info@cleverappssg.com ",
+  "platforms": {
+    "instant": "Facebook",
+    "android": "Google Play",
+    "ios": "iPhone",
+    "amazon": "Amazon",
+    "macos": "App Store",
+    "microsoft": "Microsoft",
+    "xsolla": "Xsolla",
+    "ok": "OK",
+    "vk": "VK",
+    "mm": "Mail",
+    "yandex": "Yandex",
+    "rustore": "RuStore",
+    "mbga": "Mobage",
+    "draugiem": "Draugiem"
+  },
+  "projects": ["mergecraft", "wondermerge", "fairy", "hustlemerge", "zenmatch",
+    "riddles", "tripeaks", "woodenblock", "heroes", "scramble", "wordsoup", "crocword",
+    "olympics", "magicwords", "spades", "adventure", "runes", "differences"]
+}

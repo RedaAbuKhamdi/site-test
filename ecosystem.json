@@ -1,0 +1,14 @@
+{
+  "apps" : [],
+
+  "deploy": {
+    "release" : {
+      "user" : "root",
+      "host" : "cleverappssg.com",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:rvvslv/cleverappssg.com.git",
+      "path" : "/var/www/html/cleverappssg.com",
+      "post-deploy": "./deployment/post-deploy-cleverappssgcom.bash "
+    }
+  }
+}
