@@ -48,4 +48,4 @@ jobs:
           author_email: github-actions[bot]@users.noreply.github.com
           message: "Build for commit: ${{ github.sha }}"
           new_branch: gh-pages
-          push: 'origin yourBranchName --set-upstream --force'
+          push: 'origin gh-pages --set-upstream --force'
