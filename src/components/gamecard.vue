@@ -365,7 +365,7 @@ a {
 }
 
 .game-title-square {
-  width: 100px;
+  width: 106px;
   margin-left: 0!important;
   font-size: 12pt;
 }

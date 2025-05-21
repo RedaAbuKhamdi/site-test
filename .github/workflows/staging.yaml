@@ -27,10 +27,9 @@ jobs:
           git commit -m "ci: add staging build" || echo "No changes to commit"
           git push
 
-      - name: Push to gh-pages via subtree split
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git remote set-url origin "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git"
-          SHA=$(git subtree split --prefix staging)
-          git push origin ${SHA}:gh-pages --force
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./staging
