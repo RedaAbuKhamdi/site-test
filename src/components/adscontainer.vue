@@ -73,7 +73,7 @@ export default {
 
 <style scoped>
 .ads-container {
-  padding: 6px;
+  padding: 5px;
   width: 100%;
 }
 
