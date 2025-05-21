@@ -22,6 +22,6 @@
     }
 
     .title {
-        margin-left: 35px;
+        margin-left: 33px;
     }
 </style>

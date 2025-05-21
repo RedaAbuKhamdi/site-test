@@ -21,11 +21,6 @@ jobs:
           npm install
           npm run staging
           cp staging/index.html staging/404.html
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add staging
-          git commit -m "ci: add staging build" || echo "No changes to commit"
-          git push
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
