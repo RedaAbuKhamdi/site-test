@@ -1,6 +1,8 @@
 on:
   repository_dispatch:
     types: [ deploy_ru ]
+  push:
+    branches: [ master ]
 jobs:
   deploy:
     runs-on: ubuntu-latest
