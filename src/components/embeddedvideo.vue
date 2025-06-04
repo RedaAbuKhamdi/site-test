@@ -33,7 +33,7 @@ export default {
   object-fit: cover;
 }
 .video-container {
-  top: 1;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;

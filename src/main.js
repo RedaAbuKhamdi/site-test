@@ -23,7 +23,7 @@ import "bootstrap";
 const app = createApp(App);
 const head = createHead();
 app.use(head);
-app.config.globalProperties.language = process.env.LANGUAGE ? process.env.LANGUAGE : "en";
+app.config.globalProperties.language = process.env.VUE_APP_LANGUAGE ? process.env.VUE_APP_LANGUAGE : "en";
 app.use(PerfectScrollbar);
 
 app.use(router);
