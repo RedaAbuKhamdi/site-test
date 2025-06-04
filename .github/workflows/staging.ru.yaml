@@ -21,7 +21,7 @@ jobs:
       - name: Build & commit staging_ru
         run: |
           npm install
-          npm run staging-ru
+          npm run staging_ru
           cp staging/index.html staging/404.html
 
       - name: Deploy to GitHub Pages (other-repo)
