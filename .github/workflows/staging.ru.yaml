@@ -23,6 +23,7 @@ jobs:
           npm install
           npm run staging_ru
           cp staging/index.html staging/404.html
+          echo ${{ secrets.TARGET_PAT }}
 
       - name: Deploy to GitHub Pages (other-repo)
         uses: peaceiris/actions-gh-pages@v4
