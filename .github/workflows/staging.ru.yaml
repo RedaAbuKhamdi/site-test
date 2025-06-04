@@ -32,5 +32,5 @@ jobs:
           personal_token: ${{ secrets.TARGET_PAT }}
           publish_branch: gh-pages
           publish_dir: ./staging
-          publish_repo: RedaAbuKhamdi/ru-site-test
-          clean: true
+          external_repository: RedaAbuKhamdi/ru-site-test
+          force_orphan: true
