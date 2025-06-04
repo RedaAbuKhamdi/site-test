@@ -5,7 +5,8 @@
   "scripts": {
     "start": "vue-cli-service serve --port 4000",
     "build": "vue-cli-service build --dest publish --mode production",
-    "staging": "vue-cli-service build --dest staging --mode staging"
+    "staging": "vue-cli-service build --dest staging --mode staging",
+    "staging_ru": "vue-cli-service build --dest staging --mode staging-ru"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.4",
